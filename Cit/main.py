@@ -20,6 +20,11 @@ def clone(url:str):
     git_start = subprocess.call(['git', 'clone',cn_url]) 
     typer.echo(f'现在开始为您下载:{git_start}')
 
+@app.command()
+def submodule(url:str):
+    cn_url = change(url)
+    git_sub = subprocess.call(['git', 'submodule','add' , cn_url]) 
+    typer.echo(f'现在开始为您下载:{git_sub}') 
 
 @app.command()
 def hello(name: str):
