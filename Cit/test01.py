@@ -33,7 +33,7 @@ def 网址替换(url):
     return cn_url
 
 def clone(cn_url):
-    
+    cn_url = 网址替换(url)
     subprocess.call(['git', 'clone',cn_url])    
  
 def main():

@@ -1,19 +1,35 @@
 [tool.poetry]
 name = "cit"
-version = "0.1.0"
+version = "0.2.0"
 description = "让github的下载速度比之前快一千倍"
 authors = ["中箭的吴起 <solider245@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/solider245/cit.git" # 首页
+license = "MIT"
+repository = "https://github.com/solider245/cit.git" # 仓库地址
+documentation = "https://github.com/solider245/cit.git" # 文档地址
 
+keywords = ["git", "github", "github加速"] # 关键字最多5个
+# 软件分类
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/python-poetry/poetry/issues" # 自定义地址
 [tool.poetry.dependencies]
 python = "^3.8"
 sh = "^1.14.1"
-typer = "^0.3.2"
+typer = {extras = ["all"], version = "^0.3.2"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 
-
+#[tool.poetry.scripts]
+#cit = "Cit.main:app"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
