@@ -21,6 +21,7 @@ classifiers = [
 python = "^3.8"
 sh = "^1.14.1"
 typer = {extras = ["all"], version = "^0.3.2"}
+wget = "^3.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
