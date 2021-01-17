@@ -7,7 +7,7 @@ import subprocess # 导入子模块
 import requests
 from tqdm.auto import tqdm
 
-app = typer.Typer()
+app = typer.Typer(help="从github的下载速度提高一万倍")
 #@app.command()
 def 地址序号():
     try :
@@ -48,8 +48,10 @@ def change(url:str):
     
 
 @app.command()
-def clone(url:str):
-
+def clone(url:str ):
+    """
+    示例:cit clone https://github.com/solider245/cit.git
+    """
     cn_url = change(url)[0]
     for index,item in enumerate(cn_url):
         print(index,item)
@@ -67,9 +69,11 @@ def clone(url:str):
     typer.echo(f'下载完毕{git_start}')
 
 @app.command()
-def submodule(url:str):
+def sub(url:str):
+    """
+    示例:cit sub https://github.com/solider245/cit.git
+    """
     cn_url = change(url)[0]
-    
     for index,item in enumerate(cn_url):
         print(index,item)
     
@@ -80,6 +84,9 @@ def submodule(url:str):
 
 @app.command()
 def get(url:str):
+    """ 
+    示例:cit get https://github.com/cheat/cheat/archive/4.2.0.zip
+    """
     cn_url = change(url)[0]
     for index,item in enumerate(cn_url):
         print(index,item)
@@ -101,7 +108,8 @@ def get(url:str):
         for chunk in r.iter_content(chunk_size=1024):
             if chunk:
                 f.write(chunk) """
-
+if __name__ == "__main__":
+    app()
 
 
 
