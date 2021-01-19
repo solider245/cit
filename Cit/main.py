@@ -6,8 +6,19 @@ import subprocess # 导入子模块
 # from cit_url import change
 import requests
 from tqdm.auto import tqdm
+CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 
-app = typer.Typer(help="从github的下载速度提高一万倍")
+#app = typer.Typer(add_completion=False)
+app = typer.Typer(help="从github的下载速度提高一万倍",add_completion=False)
+
+def main(
+    name: str = typer.Argument(
+        "Wade Wilson", help="Who to greet", show_default="Deadpoolio the amazing's name"
+    )
+):
+    typer.echo(f"Hello {name}")
+
+
 #@app.command()
 def 地址序号():
     try :
@@ -108,6 +119,7 @@ def get(url:str):
         for chunk in r.iter_content(chunk_size=1024):
             if chunk:
                 f.write(chunk) """
+
 if __name__ == "__main__":
     app()
 
