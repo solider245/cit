@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cit"
-version = "0.2.0"
+version = "0.3.0"
 description = "让github的下载速度比之前快一千倍"
 authors = ["中箭的吴起 <solider245@gmail.com>"]
 readme = "README.md"

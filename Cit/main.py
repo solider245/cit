@@ -29,34 +29,6 @@ def 地址序号():
         num = 0
     return num
 
-
-""" def change(url:str):
-    #url = 'https://github.com/cheat/cheat/archive/4.2.0.zip'
-    list_url = list(url)                          # 将字符串替换为列表
-    list_url.insert(18,'.cnpmjs.org')             # 在指定位置插入对应字符串 
-    list_url_02 = list(url)
-    list_url_02.insert(8,'gitclone.com/')
-    cn_url = "".join(list_url)
-    git_clone_url = "".join(list_url_02)
-    fastgit = url.replace('github.com','download.fastgit.org')
-    wuyan = url.replace('com','wuyanzheshui.workers.dev')
-    raw_fastgit = url.replace('githubusercontent.com','fastgit.org')
-    raw_sevencdn = url.replace('githubusercontent.com','sevencdn')
-    
-    chifun = 'https://github.91chifun.workers.dev//'+ url
-    ghcon = 'https://gh.con.sh/'+ url
-    api_999 = 'https://gh.api.99988866.xyz/' + url 
-    xiu = 'https://github.xiu2.xyz/' + url  
-    ghproxy = 'https://ghproxy.com/' + url 
-    zwc365 = 'https://pd.zwc365.com/seturl/' + url
-    
-    assect_url = [chifun,ghcon,ghproxy,api_999,xiu,zwc365]
-    raw_list =[raw_fastgit,raw_sevencdn] + assect_url
-    url_list = [cn_url,fastgit,wuyan,git_clone_url]+ assect_url
-    url_all =(raw_list,url_list)
-    #for index,item in enumerate(url_all):
-        #print(index,item,end='\n')
-    return url_all    """
 @app.command()
 def change(url:str):
     """ 
