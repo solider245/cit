@@ -93,8 +93,8 @@ def get(url:str):
         for chunk in r.iter_content(chunk_size=4096):
             fout.write(chunk)
 
-if __name__ == "__main__":
-    app()
+""" if __name__ == "__main__":
+    app() """
 
 
 
