@@ -6,6 +6,9 @@ import subprocess # 导入子模块
 from Cit import cit_url
 import requests
 from tqdm.auto import tqdm
+#from .main import app
+
+
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 
 
