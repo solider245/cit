@@ -26,6 +26,7 @@ python = "^3.8"
 typer = {extras = ["all"], version = "^0.3.2"}
 requests = "^2.25.1"
 tqdm = "^4.56.0"
+python-string-utils = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

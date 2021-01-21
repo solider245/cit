@@ -36,6 +36,7 @@ def change(url:str):
     """
     s = cit_url.main(url)
     
+    
 
 
 @app.command()
@@ -76,11 +77,9 @@ def get(url:str):
     """ 
     文件下载:cit get <url>
     """
-    s = cit_url.main(url)
-    n = 地址序号()
-    下载地址 = s[n]
-    print('下载地址是:',下载地址)
-    #下载命令 = subprocess.call(['wget',下载地址])
+   
+    下载地址 = cit_url.main(url)
+    print(f'下载地址是:{下载地址}')
     file_name = 下载地址.split('/')[-1]
     typer.echo(f"开始下载文件:{file_name}")
     r = requests.get(下载地址,stream=True)
