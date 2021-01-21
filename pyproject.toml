@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cit"
-version = "0.4.0"
+version = "0.4.1"
 description = "让github的下载速度比之前快一千倍"
 authors = ["中箭的吴起 <solider245@gmail.com>"]
 readme = "README.md"
@@ -27,7 +27,8 @@ typer = {extras = ["all"], version = "^0.3.2"}
 requests = "^2.25.1"
 tqdm = "^4.56.0"
 python-string-utils = "^1.0.0"
-
+[tool.poetry.scripts]
+cit ='Cit.main:app'
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 
