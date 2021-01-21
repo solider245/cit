@@ -68,7 +68,7 @@ def change(url):
         print(f'你输入的地址:{你输入的地址}')
         return 你输入的地址
     elif 参数_http in url :
-        print('这个地址不是来自github,无法改变他')
+        print('这个不是来一个来自github的地址')
         return url
         
     else:

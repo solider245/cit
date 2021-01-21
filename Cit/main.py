@@ -44,15 +44,9 @@ def clone(url:str ):
     """
     git加速:cit clone <url>
     """
-    s = cit_url.main(url)
+
     
-    try :
-        num =int(input('请输入一个数字,选择你的下载地址（默认为0）: ')) 
-    except ValueError :
-        num = 0 
-        
-    
-    最终地址 = s[num]    
+    最终地址 =   cit_url.main(url)
     git_start = subprocess.call(['git', 'clone',最终地址]) 
     
 
@@ -61,15 +55,7 @@ def sub(url:str):
     """
     子模块加速:cit sub <url>
     """
-    s = cit_url.main(url)
-    
-    try :
-        num =int(input('请输入一个数字,选择你的下载地址（默认为0）: ')) 
-    except ValueError :
-        num = 0 
-        
-    
-    最终地址 = s[num]    
+    最终地址 = cit_url.main(url)   
     git_start = subprocess.call(['git', 'submodule','add', 最终地址]) 
 
 @app.command()
